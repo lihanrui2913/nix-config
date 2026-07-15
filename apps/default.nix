@@ -1,0 +1,30 @@
+{
+  imports = [
+    ./binutils.nix
+    ./cargo.nix
+    ./clippy.nix
+    ./codex.nix
+    ./dms-shell.nix
+    ./fcitx5.nix
+    ./firefox.nix
+    ./gcc.nix
+    ./git.nix
+    ./gnupg.nix
+    ./gnumake.nix
+    ./hyprland.nix
+    ./kitty.nix
+    ./mtr.nix
+    ./nixfmt.nix
+    ./openssl.nix
+    ./pkg-config.nix
+    ./rust-analyzer.nix
+    ./rustc.nix
+    ./rustfmt.nix
+    ./steam.nix
+    ./throne.nix
+    ./vim.nix
+    ./vscode.nix
+    ./wget.nix
+    ./zsh.nix
+  ];
+}
