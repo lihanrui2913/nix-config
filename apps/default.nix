@@ -3,7 +3,6 @@
     ./binutils.nix
     ./cargo.nix
     ./clippy.nix
-    ./codex.nix
     ./dms-shell.nix
     ./fcitx5.nix
     ./firefox.nix
