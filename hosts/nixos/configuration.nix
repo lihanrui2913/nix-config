@@ -12,6 +12,7 @@
     hideMounts = true;
     directories = [
       "/etc/ssh"
+      "/etc/NetworkManager/system-connections"
       "/var/lib/NetworkManager"
       "/var/lib/bluetooth"
       "/var/lib/colord"
