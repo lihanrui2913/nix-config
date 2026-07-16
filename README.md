@@ -16,6 +16,14 @@ sudo nixos-rebuild switch --flake .#nixos
 sudo nixos-rebuild switch --extra-experimental-features 'nix-command flakes' --flake .#nixos
 ```
 
+## 临时根目录
+
+此配置使用 `impermanence`：`/` 为 tmpfs，因此重启后根目录中的未声明状态会丢失；`/nix` 与 `/home` 仍分别直接挂载到 Btrfs 的 `@nix` 和 `@home` 子卷，因而会永久保留。
+
+`@root` 子卷会挂载为 `/persist`，并保存机器标识、SSH 主机密钥、NetworkManager 连接、蓝牙配对、打印机状态、日志以及其他必要的系统服务状态。`/home` 已整体持久化，用户文件不需要重复声明。
+
+首次切换到本配置前，请确认 `hosts/nixos/hardware-configuration.nix` 中的 Btrfs UUID 与 `@root`、`@home`、`@nix` 子卷名称和实际磁盘一致。切换并重启后，可以使用 `findmnt / /persist /nix /home` 确认 `/` 是 tmpfs，其他路径为持久化挂载。
+
 ## 结构
 
 - `flake.nix`：锁定当前系统使用的 nixpkgs 提交，并集成 Home Manager。

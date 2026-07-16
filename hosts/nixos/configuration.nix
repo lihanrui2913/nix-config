@@ -8,6 +8,23 @@
 
   networking.hostName = "nixos";
 
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    directories = [
+      "/etc/ssh"
+      "/var/lib/NetworkManager"
+      "/var/lib/bluetooth"
+      "/var/lib/colord"
+      "/var/lib/cups"
+      "/var/lib/nixos"
+      "/var/lib/pipewire"
+      "/var/lib/systemd"
+      "/var/lib/upower"
+      "/var/log"
+    ];
+    files = [ "/etc/machine-id" ];
+  };
+
   users.users.void = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];

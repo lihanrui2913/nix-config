@@ -8,16 +8,27 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    impermanence = {
+      url = "github:nix-community/impermanence";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
+    {
+      nixpkgs,
+      home-manager,
+      impermanence,
+      ...
+    }:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/nixos/configuration.nix
           home-manager.nixosModules.home-manager
+          impermanence.nixosModules.impermanence
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

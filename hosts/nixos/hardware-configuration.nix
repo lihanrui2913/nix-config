@@ -24,9 +24,16 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
+    device = "none";
+    fsType = "tmpfs";
+    options = [ "mode=755" ];
+  };
+
+  fileSystems."/persist" = {
     device = "/dev/disk/by-uuid/10f99e5b-b1ae-4545-87cc-90035d29b108";
     fsType = "btrfs";
     options = [ "subvol=@root" ];
+    neededForBoot = true;
   };
 
   fileSystems."/home" = {
