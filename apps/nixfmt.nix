@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = [ pkgs.nixfmt-rfc-style ];
+  environment.systemPackages = [ pkgs.nixfmt ];
 }
