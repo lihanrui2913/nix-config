@@ -4,7 +4,9 @@
     ./cargo.nix
     ./clippy.nix
     ./dms-shell.nix
+    ./dotnet.nix
     ./fcitx5.nix
+    ./fhs.nix
     ./firefox.nix
     ./gcc.nix
     ./git.nix
@@ -13,6 +15,7 @@
     ./hyprland.nix
     ./kitty.nix
     ./mtr.nix
+    ./nix-ld.nix
     ./nixfmt.nix
     ./openssl.nix
     ./pkg-config.nix
