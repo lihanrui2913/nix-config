@@ -19,9 +19,7 @@
     ./nixfmt.nix
     ./openssl.nix
     ./pkg-config.nix
-    ./rust-analyzer.nix
-    ./rustc.nix
-    ./rustfmt.nix
+    ./rust.nix
     ./steam.nix
     ./throne.nix
     ./vim.nix
