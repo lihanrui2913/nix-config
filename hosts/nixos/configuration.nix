@@ -7,6 +7,11 @@
   ];
 
   networking.hostName = "nixos";
+  networking.nameservers = [
+    "223.5.5.5"
+    "223.6.6.6"
+    "8.8.8.8"
+  ];
 
   environment.persistence."/persist" = {
     hideMounts = true;
