@@ -13,6 +13,7 @@
     ./gnupg.nix
     ./gnumake.nix
     ./hyprland.nix
+    ./java.nix
     ./kitty.nix
     ./mtr.nix
     ./nix-ld.nix
