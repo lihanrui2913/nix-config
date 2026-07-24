@@ -8,6 +8,7 @@
     ./fcitx5.nix
     ./fhs.nix
     ./firefox.nix
+    ./flatpak.nix
     ./gcc.nix
     ./git.nix
     ./gnupg.nix

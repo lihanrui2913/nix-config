@@ -2,6 +2,7 @@
   config,
   lib,
   modulesPath,
+  pkgs,
   ...
 }:
 
@@ -20,7 +21,10 @@
     "sdhci_pci"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [
+    "ntsync"
+    "kvm-amd"
+  ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
