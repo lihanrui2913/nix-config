@@ -1,5 +1,6 @@
 {
   imports = [
+    ./asus.nix
     ./binutils.nix
     ./cargo.nix
     ./clippy.nix
@@ -21,6 +22,7 @@
     ./nixfmt.nix
     ./openssl.nix
     ./pkg-config.nix
+    ./python.nix
     ./rust.nix
     ./steam.nix
     ./throne.nix

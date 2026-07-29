@@ -16,6 +16,7 @@
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
+      "/etc/asusd"
       "/etc/ssh"
       "/etc/NetworkManager/system-connections"
       "/var/lib/NetworkManager"
