@@ -12,6 +12,7 @@
     "223.6.6.6"
     "8.8.8.8"
   ];
+  networking.enableIPv6 = true;
 
   environment.persistence."/persist" = {
     hideMounts = true;

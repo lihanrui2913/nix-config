@@ -18,6 +18,16 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    umbriel.url = "github:noctalia-dev/umbriel";
+
+    noctalia.url = "github:noctalia-dev/noctalia";
+
+    noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter";
+
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+
+    deepseek-harness.url = "github:moraxyc/deepseek-harness.nix";
   };
 
   outputs =
@@ -25,12 +35,22 @@
       nixpkgs,
       home-manager,
       impermanence,
+      nix-cachyos-kernel,
       ...
     }:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
+          (
+            { pkgs, ... }:
+            {
+              nixpkgs.overlays = [
+                nix-cachyos-kernel.overlays.pinned
+              ];
+            }
+          )
           ./hosts/nixos/configuration.nix
           home-manager.nixosModules.home-manager
           impermanence.nixosModules.impermanence

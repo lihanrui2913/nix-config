@@ -4,7 +4,7 @@
     ./binutils.nix
     ./cargo.nix
     ./clippy.nix
-    ./dms-shell.nix
+    ./deepseek-harness.nix
     ./dotnet.nix
     ./fcitx5.nix
     ./fhs.nix
@@ -14,18 +14,20 @@
     ./git.nix
     ./gnupg.nix
     ./gnumake.nix
-    ./hyprland.nix
     ./java.nix
     ./kitty.nix
     ./mtr.nix
     ./nix-ld.nix
     ./nixfmt.nix
+    ./noctalia.nix
+    ./noctalia-greeter.nix
     ./openssl.nix
     ./pkg-config.nix
     ./python.nix
     ./rust.nix
     ./steam.nix
     ./throne.nix
+    ./umbriel.nix
     ./vim.nix
     ./vscode.nix
     ./wget.nix
