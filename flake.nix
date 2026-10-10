@@ -2,7 +2,7 @@
   description = "Void's reproducible NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/8eeec934ae0dbeca3d7868c059568a65c08b2fc3";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -19,15 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    umbriel.url = "github:noctalia-dev/umbriel";
-
     noctalia.url = "github:noctalia-dev/noctalia";
 
     noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter";
 
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
-
-    deepseek-harness.url = "github:moraxyc/deepseek-harness.nix";
   };
 
   outputs =

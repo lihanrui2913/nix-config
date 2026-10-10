@@ -14,6 +14,7 @@
   ];
   networking.enableIPv6 = true;
 
+  environment.etc.hosts.mode = "0644";
   environment.persistence."/persist" = {
     hideMounts = true;
     directories = [
@@ -30,8 +31,13 @@
       "/var/lib/upower"
       "/var/log"
     ];
-    files = [ "/etc/machine-id" ];
+    files = [
+      "/etc/machine-id"
+      "/etc/hosts"
+    ];
   };
+
+  security.polkit.enable = true;
 
   users.users.void = {
     isNormalUser = true;
